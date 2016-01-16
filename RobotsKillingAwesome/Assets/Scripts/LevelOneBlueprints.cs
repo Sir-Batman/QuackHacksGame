@@ -12,23 +12,35 @@ public class LevelOneBlueprints : MonoBehaviour{
 	
 	void Start(){
 		int x,y;
-		dimensions.x = 24;
-		dimensions.y = 24;
+		dimensions.x = 30;
+		dimensions.y = 30;
         floorPlan = new int[(int)(dimensions.x), (int)(dimensions.y)];
    
 		for(x=0; x<dimensions.x; x++){
 			for(y=0; y<dimensions.y; y++){
-				if (y == 0) {
-					floorPlan [x, y] = 1;
-				} else if (x == 0) {
-					floorPlan [x, y] = 2;
-				} else if (y == (dimensions.y - 1)) {
-					floorPlan [x, y] = 0;
-				} else if (x == (dimensions.x - 1)) {
-					floorPlan [x, y] = 3;
-				} else {
-					floorPlan [x, y] = 4;
+				/*if(x == 4){ 											//row 5
+					if ((y > 3 && y < 13) || (y > 15 && y < 27)) {       //All wallUp for row 5
+						floorPlan [x, y] = 0;
+					} else {
+						floorPlan [x, y] = 6;
+					}
 				}
+				else if(x > 4 && x < 10){
+					if (y == 4 || y == 15) {
+						floorPlan [x, y] = 2;
+					} else if (y == 13 || y == 27) {
+						floorPlan [x, y] = 3;
+					} else if ((y > 4 && y < 13) || (y > 15 && y < 27)) {
+						floorPlan [x, y] = 4;
+					} else {
+						floorPlan [x, y] = 6;
+					}
+				}
+				else {
+					floorPlan [x, y] = 6;
+				}
+				*/
+				floorPlan [x, y] = 4;
 			}
 		}
 		mapMaker = GameObject.FindGameObjectWithTag("mapMaker");

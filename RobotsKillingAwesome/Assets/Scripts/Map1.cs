@@ -9,6 +9,7 @@ public class Map1 : MonoBehaviour {
 	public GameObject wallRight; //3
 	public GameObject tile; //4
 	public GameObject carpet; //5
+	public GameObject noManLand; //6
 	
 	Node[,] graph;
 	GameObject bluePrints;
@@ -16,6 +17,8 @@ public class Map1 : MonoBehaviour {
 	int[,] floorPlan;
 	Vector2 playerSpawn;
 	List<Vector2> enemySpawns;
+	private Vector2 inPosition;
+	private GameObject inObject;
 
     public GameObject playerSpawnPoint;
     public GameObject enemySpawn;
@@ -99,18 +102,28 @@ public class Map1 : MonoBehaviour {
 		for(x=0; x<dimensions.x; x++){
 			for(y=0; y<dimensions.y; y++){
                 z = floorPlan[x, y];
-				if(z == 0)
-					Instantiate(wallUp, new Vector3(x, y, 0), Quaternion.identity);
-				else if(z == 1)
-					Instantiate(wallDown, new Vector3(x, y, 0), Quaternion.identity);
-				else if(z == 2)
-                    Instantiate(wallLeft, new Vector3(x, y, 0), Quaternion.identity);
+
+				//determine where to instantiate new background tile
+				inPosition = new Vector3 (x, y, 0);
+
+				//determine which prefab to instantiate
+				if (z == 0)
+					inObject = wallUp;
+				else if (z == 1)
+					inObject = wallDown;
+				else if (z == 2)
+					inObject = wallLeft;
 				else if(z == 3)
-                    Instantiate(wallRight, new Vector3(x, y, 0), Quaternion.identity);
+					inObject = wallRight;
 				else if(z == 4)
-                    Instantiate(tile, new Vector3(x, y, 0), Quaternion.identity);
+					inObject = tile;
 				else if(z == 5)
-                    Instantiate(carpet, new Vector3(x, y, 0), Quaternion.identity);
+					inObject = carpet;
+				else if(z == 6)
+					inObject = noManLand;
+				
+				Instantiate(inObject, inPosition, Quaternion.identity);
+				
 			}
 		}
 	}

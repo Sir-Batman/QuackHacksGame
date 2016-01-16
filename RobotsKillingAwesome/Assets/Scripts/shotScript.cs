@@ -15,26 +15,28 @@ public class shotScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		//If this shot is a pShot and hits an enemy
-		if (gameObject.tag == "pShot" && other.gameObject.tag == "enemy") {
-			other.GetComponent<eScript> ().health -= bulletDmg;
+		if(!(gameObject.tag == "eShot" && other.gameObject.tag == "enemy") && gameObject.tag != other.gameObject.tag){
+			//If this shot is a pShot and hits an enemy
+			if (gameObject.tag == "pShot" && other.gameObject.tag == "enemy") {
+				other.GetComponent<eScript> ().health -= bulletDmg;
+			}
+			
+			//If this shot is an eShot and hits a player
+			else if (gameObject.tag == "eShot" && other.gameObject.tag == "player") {
+				other.GetComponent<pScript> ().health -= bulletDmg;
+			}
+			
+			//If this shot hits a wall
+			else if (other.gameObject.tag == "wall")
+			{
+				Destroy (gameObject);
+			}
+			
+			//If this bullet hits anything, always decrement its health
+			bulletHealth--;
+			
+			//If the bullet has no health, destroy it
+			if (bulletHealth <= 0) Destroy (gameObject);
 		}
-		
-		//If this shot is an eShot and hits a player
-		else if (gameObject.tag == "eShot" && other.gameObject.tag == "player") {
-			other.GetComponent<pScript> ().health -= bulletDmg;
-		}
-		
-		//If this shot hits a wall
-		else if (other.gameObject.tag == "wall")
-		{
-			Destroy (gameObject);
-		}
-		
-		//If this bullet hits anything, always decrement its health
-		bulletHealth--;
-		
-		//If the bullet has no health, destroy it
-		if (bulletHealth <= 0) Destroy (gameObject);
 	}
 }

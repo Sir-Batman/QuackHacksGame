@@ -1,0 +1,159 @@
+fileFormatVersion: 2
+guid: 1f2889d4f466f624d880d650e7b909f5
+timeCreated: 1452979283
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SpiderbotSpritesheet_0
+    21300002: SpiderbotSpritesheet_1
+    21300004: SpiderbotSpritesheet_2
+    21300006: SpiderbotSpritesheet_3
+    21300008: SpiderbotSpritesheet_4
+    21300010: SpiderbotSpritesheet_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SpiderbotSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 26
+        width: 90
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -40, y: 45.5}
+        - {x: -45, y: 26.5}
+        - {x: -45, y: -45.5}
+        - {x: 45, y: -45.5}
+        - {x: 45, y: 28.5}
+        - {x: 41, y: 45.5}
+    - name: SpiderbotSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 26
+        width: 96
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 48, y: 21.5}
+        - {x: 43, y: 45.5}
+        - {x: -35, y: 45.5}
+        - {x: -48, y: 23.5}
+        - {x: -48, y: -45.5}
+        - {x: 48, y: -45.5}
+      - - {x: -37, y: 34.5}
+        - {x: -34, y: 35.5}
+        - {x: -34, y: 38.5}
+        - {x: -37, y: 39.5}
+        - {x: -39, y: 37.5}
+    - name: SpiderbotSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 26
+        width: 96
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -35, y: 45.5}
+        - {x: -48, y: 38.5}
+        - {x: -48, y: -43.5}
+        - {x: -45, y: -44.5}
+        - {x: -31, y: -45.5}
+        - {x: 48, y: -45.5}
+        - {x: 48, y: 17.5}
+        - {x: 34, y: 45.5}
+      - - {x: 36, y: 34.5}
+        - {x: 39, y: 35.5}
+        - {x: 39, y: 38.5}
+        - {x: 36, y: 39.5}
+        - {x: 34, y: 37.5}
+    - name: SpiderbotSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 0
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: SpiderbotSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 251
+        y: 0
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: SpiderbotSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 0
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
