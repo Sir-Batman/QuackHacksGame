@@ -29,19 +29,6 @@ public class LevelOneBlueprints : MonoBehaviour{
 				} else {
 					floorPlan [x, y] = 4;
 				}
-				/*if (y % 2 == 0) {
-					if (x % 2 == 0) {
-						floorPlan [x, y] = 
-					}
-				}
-					
-				else if(y == 0)
-					floorPlan[x,y] = 0;
-				else if(x == (dimensions.x-1) || y == (dimensions.y-1))
-					floorPlan[x,y] = 0;
-				else
-					floorPlan[x,y] = 5;
-				*/
 			}
 		}
 		mapMaker = GameObject.FindGameObjectWithTag("mapMaker");

@@ -48,7 +48,7 @@ public class pScript : MonoBehaviour {
 	
 	void Attack ()
 	{
-		GameObject shotX = (GameObject)Instantiate(shot, playerPosition2d, Quaternion.identity);	//Insantiate shot at player position
+		GameObject shotX = (GameObject)Instantiate(shot, 0.85f*direction+playerPosition2d/*playerPosition2d*/, Quaternion.identity);	//Insantiate shot at player position
 		shotX.GetComponent<Rigidbody2D>().velocity = direction * shotSpeed;		//Set velocity in direction of mouse
 	}
 	

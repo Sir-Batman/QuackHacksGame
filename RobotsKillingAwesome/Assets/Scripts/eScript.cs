@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class eScript : MonoBehaviour {
 
@@ -10,9 +10,11 @@ public class eScript : MonoBehaviour {
     public float shotSpeed = 20f;
     public GameObject shot;
     GameObject player;
-    bool movementState = true;
-    int range;
-
+    //bool movementState = true;
+	public float range;
+	private Vector3 direction;
+	private Vector2 dir;
+	private Vector2 objPosition2D;
 
     void Start()
     {
@@ -28,26 +30,26 @@ public class eScript : MonoBehaviour {
         {
             if (inRange())
             {
-                attack();
+				attack();
             }
             attackTimer = attackRate;
         }
-
     }
 
     void attack()
     {
-        Debug.Log("PEW");
-        Vector3 direction = player.transform.position - transform.position;
-        Vector2 dir = new Vector2(direction.x, direction.y);
-        GameObject shotX = (GameObject)Instantiate(shot, transform.position, Quaternion.identity);
+        direction = player.transform.position - transform.position;
+        dir = new Vector2(direction.x, direction.y);
+		dir.Normalize();
+		objPosition2D = new Vector2 (transform.position.x, transform.position.y);
+		GameObject shotX = (GameObject)Instantiate(shot, dir+objPosition2D, Quaternion.identity);
         shotX.GetComponent<Rigidbody2D>().velocity = dir * shotSpeed;
     }
 
+	//determine if object is in range of player to fire
     bool inRange()
     {
-        Vector3 position = transform.position;
-        Vector2 pos = new Vector2(position.x, position.y);
+        Vector2 pos = new Vector2(transform.position.x, transform.position.y);
         if (Vector2.Distance(player.GetComponent<pScript>().playerPosition2d, pos) < range)
             return true;
         return false;
