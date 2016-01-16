@@ -3,17 +3,17 @@ using System.Collections;
 
 public class shotScript : MonoBehaviour {
 	
-	float	bulletSpeed = 4000f;
-	int bulletHealth = 1;
-	int bulletDmg = 10;
-	
-	void start ()
+	public float bulletSpeed = 20f;
+	public int bulletHealth = 1;
+	public int bulletDmg = 10;
+	private Rigidbody2D charRigidbody;
+
+	void Start ()
 	{
-		//Add force in the direction the bullet is facing
-		GetComponent<RigidBody2D>().AddRelativeForce (new Vector3(0f, 1f, 0f) * bulletSpeed);
+		transform.position = transform.position + new Vector3 (0, 0, 4f);
 	}
-	
-	void onTriggerEnter2D(Collider2D other)
+
+	/*void onTriggerEnter2D(Collider2D other)
 	{
 		//If this shot is a pShot and hits an enemy
 		if (gameObject.tag == "pShot" && other.gameObject.tag == "enemy")
@@ -32,5 +32,5 @@ public class shotScript : MonoBehaviour {
 		
 		//If the bullet has no health, destroy it
 		if (bulletHealth <= 0) Destroy (gameObject);
-	}
+	}*/
 }
