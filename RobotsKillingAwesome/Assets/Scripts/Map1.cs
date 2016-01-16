@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-public class Map : MonoBehaviour {
+public class Map1 : MonoBehaviour {
 	
 	public GameObject wallUp; //0
 	public GameObject wallDown; //1

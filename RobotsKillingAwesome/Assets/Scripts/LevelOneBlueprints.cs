@@ -12,22 +12,40 @@ public class LevelOneBlueprints : MonoBehaviour{
 	
 	void Start(){
 		int x,y;
-		dimensions.x = 100;
-		dimensions.y = 100;
+		dimensions.x = 24;
+		dimensions.y = 24;
         floorPlan = new int[(int)(dimensions.x), (int)(dimensions.y)];
    
 		for(x=0; x<dimensions.x; x++){
 			for(y=0; y<dimensions.y; y++){
-				if(x == 0 || y == 0)
+				if (y == 0) {
+					floorPlan [x, y] = 1;
+				} else if (x == 0) {
+					floorPlan [x, y] = 2;
+				} else if (y == (dimensions.y - 1)) {
+					floorPlan [x, y] = 0;
+				} else if (x == (dimensions.x - 1)) {
+					floorPlan [x, y] = 3;
+				} else {
+					floorPlan [x, y] = 4;
+				}
+				/*if (y % 2 == 0) {
+					if (x % 2 == 0) {
+						floorPlan [x, y] = 
+					}
+				}
+					
+				else if(y == 0)
 					floorPlan[x,y] = 0;
 				else if(x == (dimensions.x-1) || y == (dimensions.y-1))
 					floorPlan[x,y] = 0;
 				else
 					floorPlan[x,y] = 5;
+				*/
 			}
 		}
 		mapMaker = GameObject.FindGameObjectWithTag("mapMaker");
-		mapMaker.GetComponent<Map>().initialize();
+		mapMaker.GetComponent<Map1>().initialize();
 	}
     public Vector2 getDimensions()
     {
