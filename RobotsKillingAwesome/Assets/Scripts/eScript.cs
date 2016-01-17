@@ -38,8 +38,10 @@ public class eScript : MonoBehaviour {
         moveTime -= Time.deltaTime;
         if (moveTime <= 0)
         {
+			Debug.Log ("MoveTime <= 0");
             GetComponent<Rigidbody2D>().velocity = Random.insideUnitCircle * speed;
-            moveTime = Random.Range(2, 7);
+			Debug.Log ("Velocity of " + gameObject.name + ": " + GetComponent<Rigidbody2D> ().velocity);
+			moveTime = Random.Range(1, 3);
         }
     }
 

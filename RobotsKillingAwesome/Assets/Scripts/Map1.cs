@@ -44,7 +44,7 @@ public class Map1 : MonoBehaviour {
         }
     }
 
-    public List<Node> generatePath(Vector2 targetPos, Vector2 sourcePos)
+    /*public List<Node> generatePath(Vector2 targetPos, Vector2 sourcePos)
     {
         Dictionary<Node, float> dist = new Dictionary<Node, float>();
         Dictionary<Node, Node> prev = new Dictionary<Node, Node>();
@@ -95,7 +95,7 @@ public class Map1 : MonoBehaviour {
         }
         currentPath.Reverse();
         return currentPath;
-    }
+    }*/
 
 	void generateVisuals(){
 		int x,y,z;
@@ -104,7 +104,7 @@ public class Map1 : MonoBehaviour {
                 z = floorPlan[x, y];
 
 				//determine where to instantiate new background tile
-				inPosition = new Vector3 (x, y, 0);
+				inPosition = new Vector3 (y, -x, 0);
 
 				//determine which prefab to instantiate
 				if (z == 0)
