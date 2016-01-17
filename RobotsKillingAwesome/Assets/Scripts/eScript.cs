@@ -7,10 +7,10 @@ public class eScript : MonoBehaviour {
     float attackTimer = 0;
     float attackRate = 0.5f;
     public float health = 100;
-    public float shotSpeed = 20f;
+    public float shotSpeed = 7f;
     public GameObject shot;
     GameObject player;
-	public float range;
+	public float range = 7f;
 	private Vector3 direction;
 	private Vector2 dir;
 	private Vector2 objPosition2D;

@@ -3,11 +3,11 @@ using System.Collections;
 
 public class pScript : MonoBehaviour {
 	
-	public float speed = 5f;				//Movement speed
-	float attackTimer = 0;			//When this is 0, player can attack
-	float attackRate = 0.5f;		//Time delay between attacks
+	public float speed = 6f;				//Movement speed
+	public float attackTimer = 0;			//When this is 0, player can attack
+	private float attackRate = 0.5f;		//Time delay between attacks
 	public float health = 100;				//When this is 0, player dies
-	public float shotSpeed = 20f;			//Speed of the shot
+	public float shotSpeed = 10f;			//Speed of the shot
 	public GameObject shot;
 	//private Vector3 playerPosition3d;
 	public Vector2 playerPosition2d;

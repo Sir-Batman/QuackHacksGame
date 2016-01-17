@@ -1,19 +1,16 @@
 fileFormatVersion: 2
-guid: 1f2889d4f466f624d880d650e7b909f5
-timeCreated: 1452979283
+guid: eb420e0512bb0144fbd76f533114721c
+timeCreated: 1453006780
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: SpiderbotSpritesheet_0
     21300002: SpiderbotSpritesheet_1
     21300004: SpiderbotSpritesheet_2
-    21300006: SpiderbotSpritesheet_3
-    21300008: SpiderbotSpritesheet_4
-    21300010: SpiderbotSpritesheet_5
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
@@ -59,99 +56,84 @@ TextureImporter:
     - name: SpiderbotSpritesheet_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 26
-        width: 90
-        height: 91
+        x: 0
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -40, y: 45.5}
-        - {x: -45, y: 26.5}
-        - {x: -45, y: -45.5}
-        - {x: 45, y: -45.5}
-        - {x: 45, y: 28.5}
-        - {x: 41, y: 45.5}
+      - - {x: 57, y: -63}
+        - {x: 57, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: -57}
+        - {x: 63, y: -57}
+      - - {x: -44, y: 55}
+        - {x: -47, y: 28}
+        - {x: -47, y: -40}
+        - {x: 47, y: -40}
+        - {x: 47, y: 46}
+        - {x: 40, y: 55}
     - name: SpiderbotSpritesheet_1
       rect:
         serializedVersion: 2
-        x: 144
-        y: 26
-        width: 96
-        height: 91
+        x: 128
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 48, y: 21.5}
-        - {x: 43, y: 45.5}
-        - {x: -35, y: 45.5}
-        - {x: -48, y: 23.5}
-        - {x: -48, y: -45.5}
-        - {x: 48, y: -45.5}
-      - - {x: -37, y: 34.5}
-        - {x: -34, y: 35.5}
-        - {x: -34, y: 38.5}
-        - {x: -37, y: 39.5}
-        - {x: -39, y: 37.5}
+      - - {x: 57, y: -63}
+        - {x: 57, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: -57}
+        - {x: 63, y: -57}
+      - - {x: -21, y: 55}
+        - {x: -49, y: 37}
+        - {x: -50, y: 20}
+        - {x: -50, y: -40}
+        - {x: 22, y: -40}
+        - {x: 50, y: -36}
+        - {x: 50, y: 45}
+        - {x: 34, y: 55}
+      - - {x: -37, y: 42}
+        - {x: -34, y: 43}
+        - {x: -34, y: 46}
+        - {x: -37, y: 47}
+        - {x: -39, y: 45}
     - name: SpiderbotSpritesheet_2
       rect:
         serializedVersion: 2
-        x: 272
-        y: 26
-        width: 96
-        height: 91
+        x: 256
+        y: 0
+        width: 128
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -35, y: 45.5}
-        - {x: -48, y: 38.5}
-        - {x: -48, y: -43.5}
-        - {x: -45, y: -44.5}
-        - {x: -31, y: -45.5}
-        - {x: 48, y: -45.5}
-        - {x: 48, y: 17.5}
-        - {x: 34, y: 45.5}
-      - - {x: 36, y: 34.5}
-        - {x: 39, y: 35.5}
-        - {x: 39, y: 38.5}
-        - {x: 36, y: 39.5}
-        - {x: 34, y: 37.5}
-    - name: SpiderbotSpritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 123
-        y: 0
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: SpiderbotSpritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 251
-        y: 0
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: SpiderbotSpritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 379
-        y: 0
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      - - {x: 57, y: -63}
+        - {x: 57, y: -64}
+        - {x: 64, y: -64}
+        - {x: 64, y: -57}
+        - {x: 63, y: -57}
+      - - {x: -43, y: 55}
+        - {x: -50, y: -24}
+        - {x: -50, y: -34}
+        - {x: -45, y: -37}
+        - {x: 14, y: -40}
+        - {x: 50, y: -40}
+        - {x: 50, y: 9}
+        - {x: 49, y: 36}
+        - {x: 35, y: 55}
+      - - {x: 36, y: 42}
+        - {x: 39, y: 43}
+        - {x: 39, y: 46}
+        - {x: 36, y: 47}
+        - {x: 34, y: 45}
     outline: []
   spritePackingTag: 
   userData: 

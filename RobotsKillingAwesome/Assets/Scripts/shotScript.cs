@@ -10,7 +10,7 @@ public class shotScript : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if(!(gameObject.tag == "eShot" && other.gameObject.tag == "enemy") && gameObject.tag != other.gameObject.tag){
+		if(!(gameObject.tag == "eShot" && other.gameObject.tag == "enemy") && !(gameObject.tag == "pShot" && other.gameObject.tag == "player") && gameObject.tag != other.gameObject.tag){
 			//If this shot is a pShot and hits an enemy
 			if (gameObject.tag == "pShot" && other.gameObject.tag == "enemy") {
 				other.GetComponent<eScript> ().health -= bulletDmg;
