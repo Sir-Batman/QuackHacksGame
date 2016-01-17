@@ -7,11 +7,6 @@ public class shotScript : MonoBehaviour {
 	public int bulletDmg = 10;
 	private Rigidbody2D charRigidbody;
 
-	void Start ()
-	{
-		Debug.Log ("Bullet Script");
-
-	}
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
