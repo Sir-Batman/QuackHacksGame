@@ -11,10 +11,13 @@ public class LevelOneBlueprints : MonoBehaviour{
 	GameObject mapMaker;
 	
 	void Start(){
+		playerSpawn = new Vector2 (4f, -12f);
+
 		int x,y;
 		dimensions.x = 25;
 		dimensions.y = 30;
-        //floorPlan = new int[(int)(dimensions.x), (int)(dimensions.y)];
+		//enemySpawns.Add (new Vector2());
+		//floorPlan = new int[(int)(dimensions.x), (int)(dimensions.y)];
 		floorPlan = new int[,]{
 			{6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6},
 			{6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6},

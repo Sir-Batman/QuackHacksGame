@@ -20,16 +20,30 @@ public class Map1 : MonoBehaviour {
 	private Vector2 inPosition;
 	private GameObject inObject;
 
-    public GameObject playerSpawnPoint;
+	//public GameObject playerSpawnPoint;
+    private GameObject playerObject;
     public GameObject enemySpawn;
-	
-	public void initialize(){
+
+	void Awake(){
 		bluePrints = GameObject.FindGameObjectWithTag("bluePrints");
 		dimensions = bluePrints.GetComponent<LevelOneBlueprints>().getDimensions();      //CHANGE THESE LINES FOR DIFFERENT LEVELS
 		floorPlan = bluePrints.GetComponent<LevelOneBlueprints>().getFloorPlan();
 		playerSpawn = bluePrints.GetComponent<LevelOneBlueprints>().getPlayerSpawn();
 		enemySpawns = bluePrints.GetComponent<LevelOneBlueprints>().getEnemySpawns();
-		
+
+		playerObject = GameObject.FindWithTag ("player");
+
+	}
+
+	public void initialize(){
+		/*bluePrints = GameObject.FindGameObjectWithTag("bluePrints");
+		dimensions = bluePrints.GetComponent<LevelOneBlueprints>().getDimensions();      //CHANGE THESE LINES FOR DIFFERENT LEVELS
+		floorPlan = bluePrints.GetComponent<LevelOneBlueprints>().getFloorPlan();
+		playerSpawn = bluePrints.GetComponent<LevelOneBlueprints>().getPlayerSpawn();
+		enemySpawns = bluePrints.GetComponent<LevelOneBlueprints>().getEnemySpawns();
+		*/
+		//playerObject = GameObject.FindWithTag ("player");
+
 		generateGraph();
 		generateVisuals();
        // placeSpawns();
@@ -37,7 +51,7 @@ public class Map1 : MonoBehaviour {
 	
     void placeSpawns()
     {
-        Instantiate(playerSpawnPoint, new Vector3(playerSpawn.x, playerSpawn.y, 0), Quaternion.identity);
+		Instantiate(/*playerSpawnPoint*/ playerObject, new Vector3(playerSpawn.x, playerSpawn.y, 0), Quaternion.identity);
         foreach(Vector2 point in enemySpawns)
         {
             Instantiate(enemySpawn, new Vector3(point.x, point.y, 0), Quaternion.identity);
